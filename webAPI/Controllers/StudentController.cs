@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using webAPI.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace webAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize] // Requires authentication for all endpoints
     public class StudentController : ControllerBase
     {
         private readonly StudentManagementContext context;
